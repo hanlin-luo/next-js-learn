@@ -1,0 +1,13 @@
+# Copy from .env.local on the Vercel dashboard
+# https://nextjs.org/learn/dashboard-app/setting-up-your-database#create-a-postgres-database
+POSTGRES_URL="postgres://postgres:iwerther@localhost:5432/nextjs"
+POSTGRES_PRISMA_URL="postgres://postgres:iwerther@localhost:5432/nextjsx"
+POSTGRES_URL_NO_SSL="postgres://postgres:iwerther@localhost:5432/nextjs"
+POSTGRES_URL_NON_POOLING="postgres://postgres:iwerther@localhost:5432/nextjs"
+POSTGRES_USER="postgres"
+POSTGRES_HOST="localhost"
+POSTGRES_PASSWORD="iwerther"
+POSTGRES_DATABASE="nextjs"
+# `openssl rand -base64 32`
+AUTH_SECRET=
+AUTH_URL=http://localhost:3000/api/auth
