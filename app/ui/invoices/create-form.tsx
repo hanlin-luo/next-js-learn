@@ -1,14 +1,19 @@
-import { CustomerField } from '@/app/lib/definitions';
-import Link from 'next/link';
+import { CustomerField } from "@/app/lib/definitions";
+import Link from "next/link";
 import {
   CheckIcon,
   ClockIcon,
   CurrencyDollarIcon,
   UserCircleIcon,
-} from '@heroicons/react/24/outline';
-import { Button } from '@/app/ui/button';
+} from "@heroicons/react/24/outline";
+import { Button } from "@/app/ui/button";
 
-export default function Form({ customers }: { customers: CustomerField[] }) {
+export default async function Form({
+  customersPromise,
+}: {
+  customersPromise: Promise<CustomerField[]>;
+}) {
+  const customers = await customersPromise;
   return (
     <form>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">

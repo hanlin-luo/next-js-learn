@@ -235,3 +235,41 @@ export function PaginationSkeleton() {
     </div>
   );
 }
+
+export function CreateFormSkeleton() {
+  return (
+    <div className="bg-white rounded-lg p-4">
+      <div className="flex items-center justify-between mb-4">
+        <div className="h-6 w-24 rounded-md bg-gray-200"></div>
+        <div className="h-6 w-16 rounded-md bg-gray-200"></div>
+      </div>
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <div className="h-6 w-16 rounded-md bg-gray-200"></div>
+          <div className="mt-2 h-6 w-32 rounded-md bg-gray-200"></div>
+          <div className="mt-2 h-6 w-full rounded-md bg-gray-200"></div>
+          <div className="mt-2 h-6 w-full rounded-md bg-gray-200"></div>
+        </div>
+        <div>
+          <div className="h-6 w-16 rounded-md bg-gray-200"></div>
+          <div className="mt-2 h-6 w-32 rounded-md bg-gray-200"></div>
+          <div className="mt-2 h-6 w-full rounded-md bg-gray-200"></div>
+          <div className="mt-2 h-6 w-full rounded-md bg-gray-200"></div>
+        </div>
+      </div>
+      <div className="mt-4">
+        <div className="h-6 w-16 rounded-md bg-gray-200"></div>
+        <div className="mt-2 h-6 w-full rounded-md bg-gray-200"></div>
+        <div className="mt-2 h-6 w-full rounded-md bg-gray-200"></div>
+      </div>
+      <div className="mt-4">
+        <div className="h-6 w-16 rounded-md bg-gray-200"></div>
+        <div className="mt-2 h-6 w-full rounded-md bg-gray-200"></div>
+        <div className="mt-2 h-6 w-full rounded-md bg-gray-200"></div>
+      </div>
+      <div className="flex justify-end mt-6">
+        <div className="h-8 w-24 rounded-md bg-gray-200"></div>
+      </div>
+    </div>
+  );
+}
