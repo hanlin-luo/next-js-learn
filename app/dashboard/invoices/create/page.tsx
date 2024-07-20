@@ -4,9 +4,8 @@ import { fetchCustomers } from "@/app/lib/data";
 import { Suspense } from "react";
 import { CreateFormSkeleton } from "@/app/ui/skeletons";
 
-export default async function Page() {
+export default function Page() {
   const customersPromise = fetchCustomers();
-  //   const customers = await fetchCustomers();
 
   return (
     <div className="w-full">
