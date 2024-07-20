@@ -7,7 +7,6 @@ import { InvoicesTableSkeleton, PaginationSkeleton } from "@/app/ui/skeletons";
 import { Suspense } from "react";
 import { fetchInvoicesPages } from "@/app/lib/data";
 
-// TODO: 这里有问题，页面是阻塞的动态页面，加载很慢页面要修改成同步的，但是就需要修改Pagination的实现方式
 export default function Page({
   searchParams,
 }: {
