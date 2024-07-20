@@ -7,6 +7,7 @@ import {
   UserCircleIcon,
 } from "@heroicons/react/24/outline";
 import { Button } from "@/app/ui/button";
+import { createInvoice } from "@/app/lib/action";
 
 export default async function Form({
   customersPromise,
@@ -15,7 +16,7 @@ export default async function Form({
 }) {
   const customers = await customersPromise;
   return (
-    <form>
+    <form action={createInvoice}>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
         {/* Customer Name */}
         <div className="mb-4">
