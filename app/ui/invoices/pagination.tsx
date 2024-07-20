@@ -5,9 +5,13 @@ import clsx from "clsx";
 import Link from "next/link";
 import { generatePagination } from "@/app/lib/utils";
 import { usePathname, useSearchParams } from "next/navigation";
+import { use } from "react";
 
-export default function Pagination({ totalPages }: { totalPages: number }) {
-  // NOTE: Uncomment this code in Chapter 11
+export default function Pagination({
+  totalPagesPromise,
+}: {
+  totalPagesPromise: Promise<number>;
+}) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const currentPage = Number(searchParams.get("page")) || 1;
@@ -18,6 +22,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
     return `${pathname}?${params.toString()}`;
   };
 
+  const totalPages = use(totalPagesPromise);
   const allPages = generatePagination(currentPage, totalPages);
 
   return (
